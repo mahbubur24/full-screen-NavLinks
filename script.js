@@ -6,19 +6,19 @@ const closeMenu = document.getElementById("close");
 
 let isEnd = false;
 let isClick = false;
-console.log("load", isEnd);
+
 window.addEventListener("load", function () {
   container.style.height = `${window.innerHeight - getScrollbarWidth()}px`;
 });
 
 slideRight.addEventListener("click", function () {
   menu.style.width = 0;
-  tranProp("width");
+  setTransitionProp("width");
 });
 
 slideUp.addEventListener("click", function () {
   menu.style.height = 0;
-  tranProp("height");
+  setTransitionProp("height");
 });
 
 closeMenu.addEventListener("click", function () {
@@ -27,25 +27,25 @@ closeMenu.addEventListener("click", function () {
     menu.style.width = `0%`;
   } else {
     menu.style.height = `0%`;
-    }
-  evenStop();
+  }
+  isEventStop();
 });
 
-function evenStop() {
+function isEventStop() {
   menu.addEventListener("transitionend", function () {
     isEnd = true;
-    eventCheck();
+    clearValues();
   });
 }
 
-function eventCheck() {
+function clearValues() {
   if (isClick && isEnd) {
     menu.style.width = `0%`;
     menu.style.height = `0%`;
   }
 }
 
-function tranProp(prop) {
+function setTransitionProp(prop) {
   isClick = false;
   menu.style.width = `100%`;
   menu.style.height = `100%`;
