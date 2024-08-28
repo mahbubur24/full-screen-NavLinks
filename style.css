@@ -1,19 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
   width: 100%;
   display: flex;
- align-items: center;
+  align-items: center;
   justify-content: center;
-   position: relative;
+  position: relative;
 }
 .menu {
   background-color: rgba(0, 0, 0, 0.877);
@@ -27,47 +23,48 @@ body {
   justify-content: center;
   align-items: center;
   /* transition: width .5s; */
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   /* transition-property: height ; */
- 
-  
 }
 .menu ul li {
   list-style: none;
   padding: 10px;
   color: white;
 }
-button{
-    margin: 0 10px;
-    padding: 5px 10px;
-    background-color: green;
-    color: white;
+.menu ul li a {
+  text-decoration: none;
+  color: white;
 }
-.menuBar{
-   
-   
-}
-.menu button{
-    background-color: transparent;
-    border: none;
-}
-.icon{
-    position:absolute;
-    top: 5%;
-    right: 5%;
-    height: 20px;
-    width: 20px;
-    
-}
-.icon i{
-    color: white;
-    font-size:30px;
+button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
-.showMenuRight{
-width: 100%;
-left: 0;
+.menu button {
+  background-color: transparent;
+  border: none;
 }
-.showMenuBottom{
-    height: 100%;
+.icon {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 20px;
+  width: 20px;
+}
+.icon i {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.showMenuRight {
+  width: 100%;
+  left: 0;
+}
+.showMenuBottom {
+  height: 100%;
 }
